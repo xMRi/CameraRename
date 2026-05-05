@@ -1,8 +1,10 @@
 # CameraRename
 
-This small program ist designed to rename the cameras. It is a small helper program for my [PTZControl](https://github.com/xMRi/PTZControl) project, but it can also be used alone. 
+This small Windows program ist designed to rename the cameras. It is a small helper program for my [PTZControl](https://github.com/xMRi/PTZControl) project, but it can also be used alone. 
 
 It is not necessary to rename the cameras, but it can be helpful if you have more than one camera of the same type and want to distinguish them by name.
+
+**The program must be run with administrator rights, otherwise it will not start!**
 
 ![CameraRename](Media/CameraRename.png)
 
