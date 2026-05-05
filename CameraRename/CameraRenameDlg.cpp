@@ -313,6 +313,7 @@ void CCameraRenameDlg::OnOK()
     // Check the name if euqal.
     CString strName;
     m_edName.GetWindowText(strName);
+    strName.TrimRight();
 
     auto const &camera = FindSelectCameraInfo();
 
@@ -330,6 +331,10 @@ void CCameraRenameDlg::OnOK()
         strMsg.FormatMessage(strMask, GetSystemErrorDescription(hr));
         AfxMessageBox(strMsg, MB_ICONERROR);
 		return;
+    }
+    else
+    {
+		AfxMessageBox(IDP_RENAME_SUCCEEDED, MB_ICONINFORMATION);
     }
 
     __super::OnOK();
@@ -351,6 +356,7 @@ void CCameraRenameDlg::OnEnChangeName()
 {
     CString strName;
 	m_edName.GetWindowText(strName);
+    strName.TrimRight();
 	CString strOrgName;
 	m_edOrgName.GetWindowText(strOrgName);
 
